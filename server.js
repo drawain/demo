@@ -1,13 +1,10 @@
 var express = require('express');
 var fs = require("fs");
 var app = express();
+var lengthOf = require("./lengthOf")
 
-app.get('/readme', function(req, res) {
-  fs.readFile('lengthOf.js', function(err, data) {
-    if (err) return;
-    console.log(data.toString());
-    res.send('hi');
-  });
+app.get('/getLengthOfMedvedisznoember', function(req, res) {
+    res.send(lengthOf('medvedisznoember').toString());
 });
 
 app.listen(process.env.PORT, function() {

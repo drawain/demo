@@ -1,3 +1,3 @@
-module.exports = function() {
-    return 'Hi masik fajl!';
+module.exports = function(stringToGetLengthOf) {
+    return stringToGetLengthOf.length;
 };
