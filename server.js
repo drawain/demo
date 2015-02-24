@@ -3,6 +3,10 @@ var fs = require("fs");
 var app = express();
 var lengthOf = require("./lengthOf")
 
+app.get('/', function(req, res) {
+  res.send('FOOLDAL');
+});
+
 app.get('/getLengthOfMedvedisznoember', function(req, res) {
     res.send(lengthOf('medvedisznoember').toString());
 });
